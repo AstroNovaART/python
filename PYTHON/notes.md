@@ -72,7 +72,7 @@ for line in fhand:
 ```
 ## prompt for file name
 ```python
-fname = input("Wnter the file name: ")
+fname = input("Enter the file name: ")
 fhand = open(fname)
 count = 0
 for line in fhand:
@@ -81,3 +81,18 @@ for line in fhand:
 print("There were", count, "subject line in ", fname)
 
 ```
+### Bad File Name
+
+```python
+fname = input("Enter the file name: ")
+try:
+    fhand = open(fname)
+except:
+    print("file cannot be opened:.x"):
+    quit()
+
+count = 0
+for line in fhand:
+    if line.startswith("subject:") :
+        count=count+1
+print("There were", count, "subject line in ", fname)
