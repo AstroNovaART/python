@@ -1,5 +1,10 @@
 x=input("Enter the name of the file: ")
-y=open(x)
+try:
+ y=open(x)
+except:
+    print("File cannot be opened:", x)
+    quit()
+
 e=0
 for z in y:
     if z.startswith("Subject"):
