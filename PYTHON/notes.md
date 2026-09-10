@@ -96,3 +96,49 @@ for line in fhand:
     if line.startswith("subject:") :
         count=count+1
 print("There were", count, "subject line in ", fname)
+```
+
+
+
+
+
+# Python lists
+## programming
+* Algorithms: A set of rules or steps used to solve a problem
+- Data Structures: A particlar way to orginizing data in a computer
+
+## what is not a "collection" 
+Most of our variavles have one value in them - when we put a new value in the variable, the old value is overwritten
+
+```python
+x=2
+x=4
+print(x)
+```
+## A list is a Kind of collection
+- A collection allows us to put many values in a single "variable"
+- A collection is a nice because we can carry all many values around in one convenient package
+ ``` python
+ friends= ["Joseph", "Glenn", "sally"]
+ carryon= ["socks", "shirt", "perfume"]
+ ```
+ ### List constants
+ - List constants are surrounded by square brackets and the elements in the list are separated by cammas
+ - A list element can be any python object-even another list
+ - A list cam be empty
+ ## looking inside list
+ just like strinds , we can get at any single element in a list using an index specified in square brackets
+
+```mermaid
+graph TD
+    X[Joseph] ~~~ n1(0)
+    Y[Glenn] ~~~ n2(1)
+    Z[Sally] ~~~ n3(2)
+
+ ```
+ ``` python
+ friends = ["Joseph", "Glenn","Sally"]
+ print(friends[1])
+
+>>>>>Glenn
+```
