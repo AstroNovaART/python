@@ -148,6 +148,7 @@ graph TD
 ```python
 fruit = "Banana"
 fruit[0]="b"
+>>> traceback
 x=fruit.lower()
 print(x)
 >>> banana
@@ -157,4 +158,14 @@ print (lotto)
 lotto[2]=28
 print(lotto)
 >>>[2,14,28,41,63]
-```    
+```   
+
+  ## How Long is a list?
+  - The len() function takes a list as a parameter and returns the number of elements in the list
+  - Actually len() tells us the number of elements of any set or sequence (such as a strint...)
+ 
+  ```python
+  greet="hello Bob"
+  print(len(greet))
+  x = [1,2, "joe", 99]
+```
