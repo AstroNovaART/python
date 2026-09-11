@@ -142,3 +142,19 @@ graph TD
 
 >>>>>Glenn
 ```
+## Lists are Mutable
+- Strings are "immutable" - we cannot change the contents of a string , we must make a new string to make any changes
+- Lists are "mutable" , we can change an element of a list using the index operator
+```python
+fruit = "Banana"
+fruit[0]="b"
+x=fruit.lower()
+print(x)
+>>> banana
+lotto = [2,14,26,41,63]
+print (lotto)
+>>>[2,14,26,41,63]
+lotto[2]=28
+print(lotto)
+>>>[2,14,28,41,63]
+```    
