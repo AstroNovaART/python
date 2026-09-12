@@ -167,8 +167,11 @@ print(lotto)
   ```python
   greet="hello Bob"
   print(len(greet))
+  >>>9 
   x = [1,2, "joe", 99]
+  print(len(x))
+  >>>4
   ```
-
+ ## 
 
 
