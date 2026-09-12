@@ -226,7 +226,23 @@ t[:]
  print(stuff)
  >>> ["book",99,"cookie"]
 ```
+## Is Something in a list?
+- Python provides two operators that let you check if an item is in a list
+- These are logical operators that return True or False
+- They do not modify the list
+```python
+some = [1,9,21,10,16]
+
+9 in some
+>>> True
 
 
+15 in some
+>>> False
+
+
+20 not in some
+>>> True
+```
 
 
