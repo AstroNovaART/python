@@ -246,3 +246,92 @@ some = [1,9,21,10,16]
 ```
 
 
+## Lists are in order
+- A list can hold many items and keeps those items in the order until we do something to change the order
+- A list can be sorted (i.e., change its order)
+- The sort method (unlike in strings) means " sort yourself "
+```python
+friends = [ "Joseph", "Glenn", "Sally"]
+friends.sort()
+print(friends)
+>>> ["Glenn", "Joseph", "Sally"]
+
+
+print(friends[1])
+>>> Joseph
+```
+## Built-in Functions and List
+- There are a numbers of functions built into python that take lists as a parameters
+- Remember the loops we built? These are much simpler.
+```python
+nums = [3, 41, 12, 9, 74, 15]
+print(len(nums))
+>>>6
+
+print(max(nums))
+>>>74
+
+print(min(nums))
+>>>3
+
+print(sum(nums))
+>>>154
+
+print(sum(nums)/len(nums))
+>>>25.6
+```
+## Best Friends: Strings and Lists
+- Split breaks a string inot parts and produces a list of strings. We think of these as words. We can access a particular word or loop through all the words.
+```python
+abc = "with three words"
+stuff = abc.split()
+print(stuff)
+>>>["with", "three", "words"]
+
+print(len(stuff))
+>>>3
+
+print(stuff[0])
+>>>with
+
+print(stuff)
+>>>["with", "three", "words"]
+
+for w in stuff :
+    print(w)
+>>>With
+>>>Three
+>>>Words
+```
+
+
+- when you do not specify a selimiter, multiple spaces are treated like on delimiter
+- you can specify what delimiter character to use in the splitting
+
+```python
+line = "A lot                          of spaces"
+etc = line.split()
+print(etc)
+>>>["A","lot","of","spaces"] 
+
+
+line = "first;second;third"
+things = line.split()
+print(thing)
+>>>["first;second;third"]
+
+print(len(thing))
+>>>1
+
+thing = line.split(";")
+print(thing)
+>>>["first","second","third"]
+
+print(len(thing))
+>>>3
+```
+
+## The Double Split Pattern
+- sometimes we split a line one way, and then grab one of the pieces of the line and split that piece again
+
+
