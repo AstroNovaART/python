@@ -212,7 +212,20 @@ t[3:]
 t[:]
 >>>[9,41,12,3,74,15]
 ```
-
+# List methods
+ - There are several documentation in the list eg.[ 'append', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort'] , to know more link is <http://docs.python.org/tutorial/datastructures.html>
+ 
+ ## Building a list form scratch
+ - we can create an empty list and then add elements using the append method
+ - The list stays in order and new elements are added at the end of the list 
+ ```python
+ stuff = list()
+ stuff.append("book")
+ stuff.append(99)
+ stuff.append("cookie")
+ print(stuff)
+ >>> ["book",99,"cookie"]
+```
 
 
 
