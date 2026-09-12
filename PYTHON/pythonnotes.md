@@ -172,6 +172,48 @@ print(lotto)
   print(len(x))
   >>>4
   ```
- ## 
+ ## Using the range function
+ - The range function returns a list of numbers that range from zero to one less than the parameter
+ - we can construct an index loop using for and an integer iterator
+ ```python
+ print(range(4))
+ >>>[0,1,2,3]
+ 
+ friends=["Joseph", "Glenn", "Sally"]
+ print(len(friends))
+ >>>3
+ 
+ print(range(len(firends)))
+ >>>[0,1,2,]
+ ```
+ ## Concatenating lists using '+'
+ - We can create a new list by adding two existing lists together
+```python
+a = [1,2,3]
+b = [4,5,6]
+c = a+b
+print(c)
+>>> [1,2,3,4,5,6]
+```
+
+## Lists can be sliced Using ':'
+- Remember ':' just like in strings, the second number is "up to but not including"
+```python
+t = [9,41,12,3,74,15]
+t[1:3]
+>>> [41,12]
+
+t[:4]
+>>>[9,41,12,3]
+
+t[3:]
+>>>[3,74,15]
+
+t[:]
+>>>[9,41,12,3,74,15]
+```
+
+
+
 
 
