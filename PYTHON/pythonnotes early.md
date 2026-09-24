@@ -53,3 +53,56 @@ You cannot use reserved words as variable name / identifiers
 - with: Simplifies exception handling and resource management, commonly used for automatically closing files after opening them.
 
 - yield: Pauses a function and returns a value like return, but saves the state to allow the function to be resumed later (creating a generator).  
+ 
+ ## Condititonal steps
+ ```python
+ x = 5 
+ if x < 10:
+    print("smaller")
+if x > 20:
+    print("bigger")
+
+print("Finis")
+```
+## Repeated Steps
+- loops (repeated steps) have iteration variable that change each time through a loop.
+```python
+n = 5
+while n>0:
+    print(n)
+
+print("blastoff!")
+```
+## Variables
+- A variables is a named place in the memory where a programmer can store data and later retrive the data using the variable "name"
+- Programmers get to choose the names of the variables
+- You can change the contents of a variable in a later statement
+```python
+x=5
+y=6
+print(x+y)
+```
+## Numerical Expressions
+```mermaid
+flowchart TD
+    MyTable["<table border='1'>
+        <tr>
+            <th><b>Operator</b></th>
+            <th><b>Operation</b></th>
+        </tr>
+        <tr><td>+</td><td>Addition</td></tr>
+        <tr><td>-</td><td>Subtraction</td></tr>
+        <tr><td>*</td><td>Multiplication</td></tr>
+        <tr><td>/</td><td>Division</td></tr>
+        <tr><td>**</td><td>Power</td></tr>
+        <tr><td>//</td><td>Floor Division</td></tr>
+        <tr><td>%</td><td>Remainder</td></tr>
+    </table>"]
+```
+### Operator Precedence Rules
+Highest precedence rule to lowest precedence rule:
+- Parentheses are always respected
+- Exponentiation (raise to a power)
+- Multiplication, Division, Floor Division, and Remainder
+- Addition and Subtraction
+- Left to right
