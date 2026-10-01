@@ -190,3 +190,36 @@ for word,count in counts.items():
 print(bigword, bigcount)
 ```
 # Conditional Execution
+- Boolean expressions ask a qusetion and produce a YES or NO result which we use to control program flow
+- Boolean expressions using comparison operators evaluate to TRUE / FALSE or YES/NO
+- Comparison operators look at variables but do not change the variables
+```mermaid
+block-beta
+    columns 2
+    
+    %% Header (Row 1 - Colored)
+    b1["PYTHON"] b2["MEANING"]
+    
+    %% Row 1
+    b3["<"] b4["less than"]
+    
+    %% Row 2
+    b5["<="] b6["less than or equal to "]
+    
+    %% Row 3
+    b7["=="] b8["equal to "]
+    
+    %% Row 4
+    b9[">="] b10["greater than or equal to"]
+    
+    %% Row 5
+    b11[">"] b12["greater than"]
+    
+    %% Row 6
+    b13["!="] b14["Not equal"]
+
+    %% Styles for Row 1 Header
+    style b1 fill:#4f46e5,color:#ffffff,stroke:#312e81
+    style b2 fill:#4f46e5,color:#ffffff,stroke:#312e81
+    ```
+    
