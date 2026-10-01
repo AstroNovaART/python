@@ -106,3 +106,87 @@ Highest precedence rule to lowest precedence rule:
 - Multiplication, Division, Floor Division, and Remainder
 - Addition and Subtraction
 - Left to right
+
+## type function 
+- In python variables, literals, and constants have a "type"
+- python knows the difference between an integer number and a string 
+- python knows what "type" everything is 
+- some operations are prohibited 
+- you cannot "add 1 " to a string 
+- we can ask python what type something is by using the type() function
+```python
+type(eee)
+>>> <class'str'>
+
+type(1)
+>>> <class'int'>
+```
+## several types of Numbers
+- Numbers have two main types
+- integers are whole numbers:
+  -14, -2 ,0 ,1,100, 401233
+- Floating point Numbers have decimla parts: -2.5, 0.0, 98.6, 14.0
+- There are other number types -they are variations on float and integer
+## Type conversions
+- when you put an integer and floating point in an expression, the integer is implicitly converted to a float
+- You can contol this with the build-iin function int() and float()
+## Division
+- Dividing integers and floating point numbers using the / operator always produces a floating point result.
+```python
+print(10/2)
+>>> 5.0
+print(99.0./100.0)
+>>> 0.99
+
+```
+## Floor Division
+- Division using // operator always produces a result that is the floor of the division-meaninig the result is rounded down to the nearest integer value.
+```python
+print(10//2)
+>>> 5.0
+print(9//2)
+>>> 4
+```
+## string Conversions
+- you can also use int() and float() ato convert between strings and integers
+- you will get an error if the string does not contain numeric characters
+ 
+ ## User Input
+- we can instruct python to pause and read data from the user using the input() function 
+- The input() fuction returns a string
+``` python
+name=input("who are you?")
+print("welcome", name)
+```
+## Comments in Python
+- Anything after a # is ignored by python 
+- why comment?
+ - - Describe what is going to happen in a sequence of code
+ - - Document who wrote the code or other ancilary information
+ - - Turn off a line of code - perhaps temporarily
+ 
+ ```python
+ # Get the name of the file and open it
+ name= input("Enter file:")
+ handle = open(name, "r")
+
+ # Count word Frequency
+ counts=dict()
+ for line in handle:
+    words = line.split()
+    for word in words:
+        counts[word] = counts.get(word,0) + 1
+
+# Find the most common word
+bigcount = None
+bigword = None
+for word,count in counts.items():
+    if bigcount in none or count > bigcount:
+        bigword = word
+        bigcount = count
+
+
+# All done
+print(bigword, bigcount)
+```
+# Conditional Execution
