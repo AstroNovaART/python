@@ -279,3 +279,27 @@ if user_logged_in:               # Primary decision
     else:
         print("Standard User Dashboard")
 ```
+## Python Functions
+- There are two kinds of functions in python.
+- Built-in functions that are provided as part of python - print(),input(),type(),float(),int()...
+- functions that we define ourselves and then use
+- we treeat function names as "new" reserved words (i.e., we avoid them as variable names )
+## Function Definiiton
+- In python a function is some reusable code that takes arguments(s) as input. does some computation, and then returns a result or results
+- we define a function using the def reserved word
+- we call/invoke the function by using the function name, parenteses, and arguments in an expenssion
+ 
+ ## max function
+ - A function is some stored code that we use. A function takes some input and produces an output.
+ 
+ ```python
+ big=max("Hello world")
+ print(big)
+ >>>W
+
+
+ tiny = min("Hello world")
+ print(tiny)
+>>>' '
+```
+
