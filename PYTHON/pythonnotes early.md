@@ -221,5 +221,61 @@ block-beta
     %% Styles for Row 1 Header
     style b1 fill:#4f46e5,color:#ffffff,stroke:#312e81
     style b2 fill:#4f46e5,color:#ffffff,stroke:#312e81
-    ```
+```
+## Indentation 
+Visualizing the Block (Indentation)
+In Python, you do not "close" an if statement with an endif or a closing bracket . The block is visually and logically defined entirely by whitespace (typically 4 spaces).
+
+- Code aligned at the same indentation level belongs to the same block.
+
+- Moving back to the left (dedenting) signals the end of that specific decision block.
+
+To see exactly how a multi-way and nested block evaluates path-by-path, you can step through this interactive visualization:
+
+## One-Way Decisions
+- An if statement with no alternative. If the condition is True, the indented block executes. If False, the program skips it entirely.
+```python
+x = 10
+if x > 5:
+    print("x is greater than 5") 
+# Execution continues here regardless
+
+```
+## Two-Way Decisions (with else)
+- An if-else statement provides two strict paths. If the condition is True, the first block executes. If False, the else block executes. One of the two paths is guaranteed to run.
+``` python
+age = 16
+if age >= 18:
+    print("Eligible to vote")
+else:
+    print("Not eligible to vote")
+```
+## Multi-Way Decisions (elif)
+- Used when you have more than two mutually exclusive conditions. Python checks each condition from top to bottom. As soon as one evaluates to True, its block executes, and the rest of the chain is skipped.
+```python
+score = 85
+if score >= 90:
+    print("Grade: A")
+elif score >= 80:     # Checks this only if the first 'if' is False
+    print("Grade: B")
+elif score >= 70:     # Checks this only if the 'elif' above is False
+    print("Grade: C")
+else:                 # Catch-all if everything above is False
+    print("Grade: F")
+
+```
+
+## Nested Decisions
+- Placing an if statement inside another if statement. This is used when a secondary condition should only be checked if the primary condition is already met.
+```python
+user_logged_in = True
+is_admin = False
+
+if user_logged_in:               # Primary decision
+    print("Welcome back!")
     
+    if is_admin:                 # Nested decision (indented further)
+        print("Admin Dashboard Accessed")
+    else:
+        print("Standard User Dashboard")
+```
