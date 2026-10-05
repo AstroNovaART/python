@@ -291,7 +291,7 @@ if user_logged_in:               # Primary decision
  
  ## max function
  - A function is some stored code that we use. A function takes some input and produces an output.
- 
+
  ```python
  big=max("Hello world")
  print(big)
@@ -302,4 +302,37 @@ if user_logged_in:               # Primary decision
  print(tiny)
 >>>' '
 ```
+## Type conversions
+- when you put an integer and floating point in an expession, the integer is implicitly converted to  a float
+- you can control this with the build-in functions int() and float()
+
+## string conversions
+- you can also use int() and and float() to convert between strings and integers
+- you will get an error if the string does not contain numeric characters
+
+## Building our Own Function 
+- we create a new function using the def keyword followed by optional parameters in parentheses
+- we indent the body of the function
+- This defines the function but does not execute the body of the function 
+
+## Building our own Functions
+- we create a new function using the def keyword followed by optional parameters in parentheses
+- we indent the body of the function
+- This defines the function but does not execute the body of the function
+
+
+### Definitons and Uses
+- once we have defined a function, we can call (or invoke) it as many times as we like
+- This is the store and reuse pattern
+
+## Arguments
+- An argument is a value we pass into the function as its input when we call the function
+- we use arguments so we can direct the function to do different kinds of work when we call it at different times
+- we put the arguments in parentheses after the name of the function
+
+## Parameters
+A parameter is a variable which we use in the funciton definition. It is a "handle" that allows the code in the function to access the arguments for a particular function invocation.
+
+## Return Values
+often a function will take it arguments, do some computation, and return a value to be used as the value of the function call in the calling expression. The return keyword is used for this.
 
