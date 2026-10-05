@@ -336,3 +336,114 @@ A parameter is a variable which we use in the funciton definition. It is a "hand
 ## Return Values
 often a function will take it arguments, do some computation, and return a value to be used as the value of the function call in the calling expression. The return keyword is used for this.
 
+- A "fruitful" function is one that produces a result (or return value)
+- The return statement ends the function execution and "sends back" the result of the function
+
+### Multiple Parameters/ Arguments
+- we can define more then one parameter in the function definition
+- we simply add more arguments when we call the funciton
+- we match the number and order of arguments and parameters
+
+```python
+def addtwo(a,b):
+    added = a+b
+    return added
+
+x = addtwo(3, 5)
+print(x)
+
+>>> 8
+```
+## void (non-fruitfull) Functions
+- when a function does not return a value, we call it a "void" function
+- Functions that return values are "fruitfull" functions
+- Void functions are "not frutiful"
+
+### To funcition or not to function...
+ - organize your code into "paragraphs" - capture a complete thought and name "name it"
+- Don't repeat yourself - make it work once and then reuse it 
+- If something gets to long or complex, break it up into logical chunks and put those chunks in functions
+- make a library of common stuff that you do over and over - perhaps share this with your friends...
+
+# Loops and Iteration
+## Repeated Steps
+Loops have iteration variables that change each time through a loop. often these iteration variables go through a sequence of numbers.
+```python
+n = 5
+while n > 0 :
+    print(n)
+    n = n - 1
+    print("Blastoff!")
+    print(n)
+
+```
+## An Infinite loop
+ ```python
+ n=0
+ while n>0:
+    print("lather")
+    print("rinse")
+print("Dry off!")
+```
+## Breaking out of loop
+- The break statement ends the current looop and jumps to the statement immediately following the loop
+- It is like a loop test that can happen anywhere in the body of the loop
+```python
+while True:
+    line = input(">")
+    if line == "done":
+        break
+    print(line)
+print("Done!")
+
+```
+## Finishing an Iteration with continue
+  
+- The continue statement ends the current iteration and jumps to the top of the loop and starts the next iteration
+```python
+while True:
+    line = input(">")
+    if line[0] == "#" :
+        continue
+    if line == "done":
+        break
+    print(line)
+ print("Done!")
+ ```
+
+ ## Indefinite loop 
+ - while loops are called "indefinite loops" because they keep going until a logical condition becomes False
+ - The loops we have seen so far are pretty easy to examine to see if they will terminate or if they will be "infinite loops"
+ - Sometimes it is a little harder to be sure if a loop will terminate
+
+ ## Definite Loops
+ - Quite often we have a list of items of the lines in a file effectively a finite set of things
+ - we can write a loop to  run that loop once for each of the items in a set using the python for construct
+ - These loops are called :definite loops" because they execute an exact number of times 
+ - we say that "definite loops iterate through the members of a set"
+ ```python 
+ # A simple Definite loops
+ for i in [5,4,3,2,1]:
+    print(i)
+  print("Blastoff!")
+
+
+
+  # A Definite Loop with strings
+  friends = ["Joseph","Glenn","Sally"]
+  for friend in friends :
+    print("happy new year:", friend)
+  print("Done!")
+ 
+ ```
+## A Simple Definite loop 
+Definite loops(for loops) having explicit iteration variables that change each time through a loop. These iteration variable move through the sequence or set 
+
+## Looking at in...
+- The iteration variable "iterates" through the sequence (ordered set)
+- The block(body) of code is executed once for each value in the sequence
+- The iteration variable moves through all of the values in the sequence
+- The iteration variable "Iterates" through the sequence (ordered set)
+- The block (body) of code is executed once for each values in the sequence
+- The iteration variable moves through all of the values in the sequence 
+
