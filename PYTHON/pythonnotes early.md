@@ -446,4 +446,53 @@ Definite loops(for loops) having explicit iteration variables that change each t
 - The iteration variable "Iterates" through the sequence (ordered set)
 - The block (body) of code is executed once for each values in the sequence
 - The iteration variable moves through all of the values in the sequence 
+```python
+for i in [5,4,3,2,1]:
+    print(i)
+```
+## Loop Idioms: What we do in loops
+Note: Even though these examples are simples, the patterns apply to all kinds of loops
 
+## Making "smart" loops
+- The trick is "Knowing" something about the whole loop when you are stuck writting code that only sees one entry at a time 
+- - -
+- Set some variables to initial vlaues 
+for thing in data;
+- look for something or do something to each entry separately, updating a variable
+- Look at the variables
+## Finding the largest value
+- We make a variable that contains the largest value we have seen so far. If the current number we are looking at is larger, it is the new largest value we have seen so far.
+```python
+largest_so_far = -1
+print("Before", largest_so_far)
+for the_num in [9,41,12,3,74,15]:
+    if the_num > largest_so_far :
+        largest_so_far = the_num
+        print(largest_so_far, the_num)
+
+print("After", largest_so_far)
+```
+# More Loop Patterns...
+## Counting in a loop
+- To count how many times we execute a loop, we introduce a counter variable that starts at 0 and we add one to it each time through the loop.
+```python
+zork = 0
+print("Before", zork)
+for thing in [9,41,12,3,74,15]:
+    zork = zork + 1
+    print(zork,thing)
+print("After", zork)
+
+```
+## Summing in a loop 
+- To add up a value we encounter in a loop, we introduce a sum variable that starts at 0 and we add the vlaue to the sum each time through the loop.
+```python 
+zork = 0
+print("Before", zork)
+for thing in [9,41,12,3,74,15]:
+    zork = zork + thing
+    print(zork, thing)
+print("After", thing)
+```
+
+         
