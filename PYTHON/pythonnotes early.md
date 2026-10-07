@@ -492,7 +492,40 @@ print("Before", zork)
 for thing in [9,41,12,3,74,15]:
     zork = zork + thing
     print(zork, thing)
-print("After", thing)
+print("After", zork)
 ```
+## Finding the Average in a loop 
+- An average just combines the counting and sum patterns and divides when the loop is done.
+``` python
+count = 0
+sum = 0
+print("Before", count, sum)
+for value in [9,41,12,3,74,15]:
+    count = count + 1
+    sum = sum + value
+    print(count,sum,value)
+  print("After", count, sum, sum / count)
+```
+## Filtering in a loop
+- We use an if statement in the loop to catch / filter the values we are looking for.
+```python
+print("Before")
+for value in [9,41,12,3,74,15]:
+    if value > 20:
+        print("Large number", value)
+print("After")
+```
+## Search using a Boolean Variable
+- If we just want to search and know if a value was found, we use a variable that starts at False and is set to True as soon as we find what we are looking for.
+```python
+found = False
+print("Before", found)
+for value in [9, 41, 12, 3, 74, 15]:
+    if value == 3 :
+        found = True
+        print(found, value)
+    print("After", found)
 
-         
+```
+## Finding the smallest value 
+- we still have a variable that is the smallest so far. The first time through the loop smallest is None, so we take the first value to be the smallest.(the none is a void value)
