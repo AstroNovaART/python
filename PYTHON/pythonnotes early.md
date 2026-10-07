@@ -620,3 +620,67 @@ while index < len(fruit):
     print(index, letter)
     index = index + 1 
 ```
+- A definite loop using a for statement is much more elegant 
+- The iteration variable is completely taken care of by the for loop 
+```python
+fruit = "banana"
+for letter in fruit:
+    print(letter)
+
+
+
+
+index = 0 
+while index < len(fruit):
+    letter = fruit[index]
+    print(letter)
+    index = index + 1
+```
+## Looping and Counting
+- This is simple loop that loops through each letter in a string and counts the number of times the loop encounteres the 'a' character
+```python 
+word = "banana"
+count = 0 
+for letter in word :
+    if letter == "a" :
+        count = count + 1
+print(count)
+```
+## Looking Deeper into in 
+- The iteration variable "iterates" through the sequence (ordered set)
+- The block (body) of code is executed once for each value in the sequence
+- The iteration variable moves through all of the values in the sequence
+```python
+for letter in "banana":
+    print(letter)
+```
+- The iteration variable "iterates" through the string and the block (body) of code is executed once for each value in the sequence
+
+## Slicing strings
+- we can also look at any continuous section of a string using a colon operator
+- The second number is one beyond the end of the slice - "up to but not including"
+- If the second number is beyond the end of the string, it stops at end 
+```python 
+s = "Monty python"
+print(s[0:4])
+>>>Mont
+
+
+print(s[6:7])
+>>>p
+
+print(s[6:20])
+>>>python
+```
+- > If we leave off the first number of the last numberof the slice, it is assumed to be the beginning or end of the string respectively
+```python 
+s = "Monty Python"
+print(s[:2])
+>>>Mo
+
+print([8:])
+>>>thon
+
+print(s[:])
+Monty Python
+```
