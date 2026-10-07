@@ -528,4 +528,67 @@ for value in [9, 41, 12, 3, 74, 15]:
 
 ```
 ## Finding the smallest value 
-- we still have a variable that is the smallest so far. The first time through the loop smallest is None, so we take the first value to be the smallest.(the none is a void value)
+- we still have a variable that is the smallest so far. The first time through the loop smallest is None, so we take the first value to be the smallest.(the none is a void value) 
+```python
+smallest = None
+print("Before")
+for value in [9, 41, 12, 3, 74, 15]:
+    if smallest is None :
+        smallest = value
+    elif value < smallest :
+        smallest = value
+    print(smallest, value)
+print("After", smallest)
+```
+## This is and is not operators
+- Python has an is operator that can be used in logical expressions 
+- Implies "is the same ass"
+- Similar to, but stronger than ==
+- is not also is a logical operator
+```python
+smallest = None
+print("Before")
+for value in [3, 41, 12, 9, 74, 15]:
+    if smallest is None :
+        smallest = value
+        elif value < smallest :
+            smallest = value
+        print(smallest, value)
+
+print("After", smallest)
+```
+# String
+## String Data Type 
+- A string is a sequence of characters
+- A string literal uses quotes 'Hello' or "Hello"
+- For strings, + means "concatenate"
+- When a string contains numbers, it is still a string
+- We can convert numbers in a string into a number using int()
+## Reading and converting
+- We prefer to read data in using strings and then parse and convert the data as we need 
+- This gives us more control over error situations and/or bad user input 
+- Input numbers must be converted from stings
+```python 
+name = input("Enter:")
+print("name")
+>>>Enter:chuck
+>>>chuck
+```
+## Looking Inside Strings
+- we can get at any single character in a string using an index specified in square brackets
+- The index value must be an integer and starts at zero
+- The index value can be an expression that is computed 
+```mermaid
+flowchart LR
+    0["b<br>---<br>0"] --- 1["a<br>---<br>1"] --- 2["n<br>---<br>2"] --- 3["a<br>---<br>3"] --- 4["n<br>---<br>4"] --- 5["a<br>---<br>5"]
+```
+```python
+fruit = "banana"
+letter = fruit[1]
+print(letter)
+>>>a
+x = 3
+w = fruit[x - 1]
+print(w)
+>>> n
+```
