@@ -592,3 +592,31 @@ w = fruit[x - 1]
 print(w)
 >>> n
 ```
+## A character Too Far
+- you will get a python error if you attempt to index beyond the end of a string
+- so be careful when constructing index values and slices
+## Strings have length
+- The built-in function len gives us the length of a string
+```python 
+fruit = "banana"
+print(len(fruit))
+>>> 6
+```
+# Len Function
+- A function is some stored code that we use. A fucntion takes some input and produces an output.
+```python
+fruit = "banana"
+x = len(fruit)
+print(x)
+>>> 6 
+```
+## Looping Through Strings
+- Using a while statement, an iteration variable, and the len function, we can construct a loop to lool at each of the letters in a string individually
+```python
+fruit = "banana"
+index = 0
+while index < len(fruit):
+    letter = fruit[index]
+    print(index, letter)
+    index = index + 1 
+```
