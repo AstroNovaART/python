@@ -684,3 +684,14 @@ print([8:])
 print(s[:])
 Monty Python
 ```
+## String Concatenation 
+- when the + operator is applied to string, it means "concatenation"
+
+```python
+a = "Hello"
+b = a + "There"
+print(b)
+>>>HelloThere
+ c = a + ' ' + "There"
+ print(c)
+ >>>hello There
