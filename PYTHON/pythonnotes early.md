@@ -695,3 +695,280 @@ print(b)
  c = a + ' ' + "There"
  print(c)
  >>>hello There
+```
+ ## Using in as a Logical Operator 
+ - The in keyword can also be used to check to see if one string is "in" another string
+ - The in expression is a logical expression that returns True or False and can be used in an if statement 
+ ```python
+ fruit = "banana"
+ "n" in fruit
+ >>>True
+
+
+ "m" in fruit
+ >>>False
+
+
+"nan" in fruit
+>>>True
+
+
+if "a" in fruit :
+    print("Found it!")
+>>>Found it!
+```
+## String Comparison
+```python
+if word == "banana":
+    print("All right, bananas.")
+
+if word < "banana":
+    print("your word," + word + ", comes before banana.")
+else word > "banana":
+    print("your word," + word + ", comes after banana.")
+else:
+    print("All right, bananas.")
+
+
+```
+## String Library
+- python has a number of string functions which are in the string library
+- These functions are already built into every string - we invoke them by appending the function to the string variable
+- These functions do not modify the original string, instead they return a new string that has been altered
+
+```python
+greet = "Hello Bob"
+zap = greet.lower()
+print(zap)
+>>>hello bob
+
+print(greet)
+>>>Hello Bob
+
+print("Hi There".lower())
+>>>hi there
+```
+
+## String Library
+```python
+str.capitalize()
+str.center(width[, fillchar])
+str.endswith(suffix[, start[, end]])
+str.find(sub[, start[, end]])
+str.lstrip([chars])
+str.replace(old, new[, count])
+str.lower()
+str.rstrip([chars])
+str.strip([chars])
+str.upper()
+# many more library in python official website , learn it from there
+
+```
+## Searching a String 
+- we use the find() function to search for a substring within another string 
+- find() finds the first occurrence of the substring 
+- If the substring is not found, find() retunrs -1
+- - remember that string postiton starts at zero
+```python 
+fruit = "banana"
+pos = fruit.find("na")
+print(pos)
+>>>2
+aa = fruit.find("z")
+print(aa)
+>>>-1
+```
+
+## Making everything UPPER CASE
+- you can make a copy of a string in lower case or upper case
+- Often when we are searching for a string using find() we first convert the string to lower case so we can search as string regardless of case 
+```python
+greet = "Hello Bob"
+nnn = greet.upper()
+print(nnn)
+>>>HELLO BOB
+
+www = greet.lower()
+print(www)
+>>>hello bob
+```
+## Search and Replace
+- The replace() function is like a "search and replace" operation in a word processor 
+- It replaces all occurrences of the search string with the replacememnt string 
+```python 
+greet = "Hello Bob"
+nstr = greet.replace("Bob", "Jane")
+print(nstr)
+>>>Hello Jane
+
+nstr = greet.replace("o","X")
+print(nstr)
+>>>HellX BXb
+```
+## Stripping Whitespace
+- Sometimes we want to take a string and remove whitespace at the beginning and/or end
+- lstrip() and rstrip() remove whitespace at the left or right
+- strip() removes both beginning and ending whitespace
+```python
+greet = "   Hello Bob   "
+greet.lstrip()
+>>>"Hello Bob  "
+
+
+greet.rstrip()
+>>>"    Hello Bob   "
+
+greet.strip()
+>>>"Hello Bob"
+```
+### Prefixes
+```python
+line = "please have a nice day"
+line.startswith("please")
+>>>True
+
+line.startswith("P")
+>>>False
+```
+### Parsing and Extracting
+```python
+data = "From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008"
+atpos = data.find("@")
+print(atpos)
+>>>21
+
+sppos = data.find(' ',atpos)
+print(sppos)
+>>>31 
+
+host = data[atpos+1 : sppos]
+print(host)
+>>>uct.ac.za
+```
+# Reading Files
+## File Processing
+- A text file can be thought of as a sequence of lines
+## Opening a File
+- Before we can read the contents of the file, we must tell python which file we are going to work with and what we will be doing with the file 
+- This is done with the open() function
+- open() returns a "file handle"o - a variable used to perform operations on the file 
+- Similar to "file -> open" in a word processor
+## Using open()
+- fhand = open('mbox.txt','r')
+- handle = open(filename, mode)
+- returns a handle use to manipulate the file
+- filenames is a string
+- mode is optional and should be 'r' if we are planning to read the file and 'w' if we are going to write to the file
+
+## what is handle?
+```python
+fhand = open('mbox.txt')
+print(fhand)
+>>><_io.TextIOWrapper name='mbox.txt' mode='r' encoding='UTF-8'>
+```
+## The newline character
+- we use special character called the "newline" to indicate when a line ends
+- we represents it as \n in strings
+- Newline is still one character - not two 
+
+```python
+stuff = "Hello\nworld!"
+stuff
+"Hello\nworld!"
+print(stuff)
+>>>Hello
+>>>world!
+
+stuff = "X\nY"
+print(stuff)
+>>>X
+>>>Y
+len(stuff)
+>>>3
+```
+- A text file can be thought of as a sequence of line
+- A text file has newlines at the end of each line
+
+# Reading Files in python
+## File handle as a Sequence
+- A file handle open for read can be treated as a sequence of strings where each line in the file is a string in the sequence
+- we can use thr for statement to iterate through a sequence
+- remember - a sequence is an ordered set
+```python
+xfile = open('mbox.txt')
+for cheese in xfile:
+    print(cheese)
+
+```
+## counting lines in a file
+- open a file read-only
+- use a for loop to read each line 
+- Count the lines and print out the number of lines
+```python
+fhand = open('mbox.txt')
+count = 0
+for line in fhand:
+    count = count + 1
+print('line count:', count)
+```
+## Reading the *whole* file
+- we can read the whole file (newlines and all) into a single string 
+```python 
+fhand = open('mbox-short.txt')
+inp = fhand.read()
+print(len(inp))
+>>>94626
+# The result is just a sample example
+
+print(inp[:20])
+>>> Form stephen.marquar
+```
+## Searching Through a File 
+- we can put an if statement in our for loop to only print lines that meet some criteria 
+```python
+fhand = open('mbox-short.txt')
+for line in fhand:
+    line = line.rstrip()
+    if line.startwith('From:'):
+    print(line)
+```
+- We can strip the whitespace form the right-hand side of the string using rstrip() form the string library 
+- The newline is considered "white space" and is stripped 
+## Skipping with continue
+- we can conveniently skip a line by using the continue statement 
+## Using in to select Lines
+- we can look for a string anywhere in a line as our selection criteria 
+```python 
+fhand = open('mbox-short.txt')
+for line in fhand:
+    line = line.rstrip()
+    if not '@uct.ac.za' in line :
+        continue
+    print(line)
+```
+## Prompt for file name
+```python
+fname = input('Enter the file name:  ')
+fhand = open(fname)
+for line in fhand:
+    if line.startwith('subject:'):
+        count = count + 1
+print('There were', count, subject lines in'. fname)
+```
+## Bad file names 
+```python
+fname = input('Enter the file name: ')
+try:
+    fhand = open(fname)
+execpt:
+    print('File cannot be opened:', fname)
+    quit()
+
+count = 0
+for line in fhand:
+    if line.startwith('Subject:'):
+        count = count + 1
+
+  print(' There were', count, 'subject lines in ', fname)
+  ```
+  
