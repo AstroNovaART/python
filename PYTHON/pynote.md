@@ -1204,4 +1204,87 @@ print(len(thing))
 ## The Double Split Pattern
 - sometimes we split a line one way, and then grab one of the pieces of the line and split that piece again
 
+```python
+#Example: From stephen.marquard@uct.ac.za sat Jan   5 09:14:16  2008
+words = line.split()
+email = words[1]
+pieces = email.split('@')
+print(pieces[1])
+>>> uct.ac.za 
+```
+# Python Dictionaries
+
+## what is a collection?
+- A collection is nice because we can put more than one value in it and carry them all around in one convenients package
+- We we have a bunch of values in it and carry them all around in one convenient package
+- We do this by having more than one place "in" the variable
+- We have ways of finding the different places in the variable 
+
+## what is not a collection?
+- most of our variables have one value in them - when we put a new value in the variable - the old value is overwritten 
+```python
+x = 2
+x - 4
+print(x)
+>>> 4
+```
+## A story of Two Collections...
+- list: A linear collection of values Lookup by position 0 .. length-1
+- Dictionary: A linear collection of key-value pairs Lookup by "tag" or "key"
+
+## Dictionaries
+- Dictionaries are python's most powerfull data collection 
+- Dictionaries allow us to do fast database-like operations in python 
+- similar concepts is different programming language
+- Associative Arrays - Perl/PHP
+- properties or map or HashMap - Java
+- property Bag - C# / .Net
+
+## Dictionaries over time in python 
+- Prior to python 3.7 dictionaries did not keep entries in the order of insertion 
+- Python 3.7 (2018) and later dictionaries keep entires in the order they were inserted
+- "insertion order" is not "always sorted order"
+
+## Below the Abstraction 
+- Python lists, dictionaries, and tuples are "abstract objects" designed to be easy to use
+- For now we will just understand them and use them and thank the creators of Python for making them easy for us 
+- Using python collections is easy. Creating the code to support them is tricky and uses computer science concepts like dynamic memory, arrays, linked lists, hash map and trees.
+- But that umplemention detail is for a later course...
+
+## Lists(Review)
+- we append values to the end of a List and look them up by position
+- we insert values into a Dictionary using a key and retrieve them using a key 
+```python 
+cards = list()
+cards.append(12)
+cards.append(3)
+cards.append(75)
+print(cards)
+>>>[12,3,75]
+
+print(cards[1])
+>>>3
+
+cards[1] = cards[1] + 2
+print(cards)
+>>>[12,5,75]
+```
+## Dictionaries
+- We append values to the end of a lsit and look them up by position
+- we insert values into a Dictionary using a key and retrive them using a key 
+```python
+cabinet = dict()
+cabinet['summer'] = 12
+cabinet['fall'] = 3
+cabinet['spring'] = 75
+print(cabinet)
+>>>{'summer': 12, fall': 3, spring': 75}
+
+print(cabinet['fall'])
+>>>3
+
+cabinet['fall'] = cabinet['fall'] + 2
+print(cabinet)
+>>>{'summer': 12, 'fall': 5, 'spring': 75}
+```
 
